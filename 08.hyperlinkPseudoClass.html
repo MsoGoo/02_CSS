@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08.hyperlinkPseudoClass</title>
+    <style>
+        /* 
+            :link 表示没访问过的链接
+            :visited 表示访问过的链接
+
+            由于隐私的原因，visited 不允许设置字体大小
+            visited 只能修改链接颜色
+        */
+        
+        a:link {
+            color: red;
+            font-size: 20px;
+        }
+
+        a:visited{
+            color: orange;
+        }
+
+        /* 
+            :hover 表示鼠标移入的状态
+            :active 表示鼠标点击状态
+        
+        */
+
+        a:hover{
+            color: aqua;
+            font-size: 50px;
+        }
+
+        a:active {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        状态
+        1.没有访问过的链接
+        2.访问过的链接
+    -->
+
+    <a href = "https://www.baidu.com" target="_blank">baidu</a>
+    
+    <br><br>
+
+    <a href = "https://www.baidu.com" target="_blank">baidu_2</a>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10.inheritance</title>
+    <style>
+
+        body{
+            font-size: 20px;
+        }
+        /* 
+            为一个元素设置了样式，他的后代元素也会被设置样式
+            继承为了方便开发
+            并不是所有的样式都会被继承，比如背景，布局相关的等内容不会被继承
+        */
+        p{
+            color: red;
+            background-color: orange;
+        }
+
+        div{
+            color:aqua
+        }
+    </style>
+
+</head>
+<body>
+    <!--
+        P元素中不能放块元素
+    -->
+    <p>
+        这是个p元素
+        <br>
+        <span> 这是个span</span>
+    </p>
+
+    <span>p 元素外的span</span>
+    <div> 
+        我是div
+        <span>
+            我是div 里的span 
+            <br>
+            <em> 我是 span里的em </em>
+        </span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03.cssSelector</title>
+    <style>
+        /* 
+            将所有段落设置为红色
+            1.元素选择器
+                根据标签名来选中指定的元素
+                语法：标签名（）
+                例： p{}, h1{}, div{}    
+        */
+        /* h1{
+            color: violet;
+        }
+
+        p{
+            color: blue;
+        } */
+
+        /* 
+            如果只想指定某个元素的样式
+            2. ID 选择器
+                作用：根据ID 来选择元素，
+                ID 是唯一的, 有些浏览器可能两个重复ID 可以使，但是有些不行。
+                例子： #first_line
+                ID 在Js的一些操作中如果有遇到重复的会有隐患
+        */
+
+        #first_line{
+            color: blue
+        }
+
+        /* 
+            仅将后两行设置成蓝色。。 
+            3. class 选择器  
+                多个class 之间用空格隔开
+                例子： <p class = "hello asd">  
+        */
+        .yellow{
+            color:yellow;
+        }
+
+        .abc{
+            font-size: 50px;
+        }
+
+        /* 
+            通配选择器
+            作用于所有元素
+            语法： *
+        */
+        *{
+            color:rgba(197, 0, 0, 0.178)
+        }
+        
+
+        p.blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1> 我是标题 </h1>
+
+    <p id = "first_line">这是一首诗</p>
+    <p>无聊人写的</p>
+    <p class = "yellow abc">你爱信不信</p>
+    <p class = "yellow">也没啥不能信</p>
+    <p class = "blue"> 蓝色</p>
+</body>
+</html>

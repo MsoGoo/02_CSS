@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.selectorSpecificity</title>
+    <style>
+        div#box01{
+            color: black;
+        }
+
+        #box01{
+            color: aqua;
+        }
+
+        .red{
+            color: red;
+        }
+
+        div{
+            color:blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+        style clash
+            priority:                               Magnitude
+                1. inline style                     HIGHEST #1
+                2. id selector                              #2
+                3. class and pseduo selector                #3    
+                4. element selector                         #4
+                5. Wildcard Selectors                       #5
+                6. inherit                          LOWEST  #6
+            The priority of the comparison is to add the priorities of all the selectors. The higher the sum, the higher the display priority
+            The accumulation of selectors cannot span orders of magnitude
+            if the priorities of 2 selectors are the same, choose the one write lower on the style sheet
+            can add "!important" tag to get the highest priority.
+    -->
+    <div id="box01" class="red">I am a div</div>
+
+</body>
+</html>

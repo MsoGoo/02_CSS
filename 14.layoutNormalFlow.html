@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.layoutNormalFlow</title>
+
+    <style>
+        .box1{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        normal flow
+            web is a Multilayer layout structure
+            Client view is a bird's-eye view
+            The bottom layer is called the normal flow
+            All elements we created are defaulted to be arranged in normal flow
+            An element has two main states
+                - in normal flow
+                - out of normal flow
+
+            
+            features of elements in normal flow
+                - block elements
+                    - take up a line | no matter the size of width
+                    - The default width is the width of the parent element
+                    - The default height is the height occupied by the inner child elements
+                - inline elements
+                    - won't take up a line, the size is itself size
+                    - arrange from left to right. if the current line cannot accommodate all the context, switch to the next line.
+                    - The default width and height of inline elements are the same as the content size
+
+    -->
+
+    <div class="box1">box01</div>
+    <div class="box2">box02</div>
+
+</body>
+</html>

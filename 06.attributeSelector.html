@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06.attributeSelector</title>
+    <style>
+        /* 
+            【属性名】 选择含有指定属性的元素
+            【属性名 = 属性值】选择含有指定属性值的元素
+            note 当属性值为全数字的时候可能会出错
+            【属性名 ^= 属性值】选择属性值以指定值开头
+            [属性名 $= 属性值] 选择属性值以指定值结尾
+            [属性名 *= 属性值] 属性值中含有指定值的元素
+        */
+        /* p[title] {
+            color: gold;
+        } */
+
+        /* p[title=what] {
+            color: goldenrod;
+        } */
+
+        
+        /* p[title ^= what] {
+            color: goldenrod;
+        }  */
+
+        p[title $= ttt] {
+            color: blue;
+        } 
+
+    </style>
+</head>
+<body>
+    <p title = "kkk"> 
+        今天无聊又上课，
+        <br> 
+        看看能不能划水。
+    </p>
+    
+    <p title = "what">
+        今天天气不错。
+    </p>
+
+    <p title = "what123k">
+        今天天气不错。
+    </p>
+
+    <p title = "whatttt">
+        今天天气不错。
+    </p>
+
+    <p title = "whatkkk">
+        今天天气不错。
+    </p>
+
+</body>
+</html>

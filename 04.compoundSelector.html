@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04.compoundSelector</title>
+
+    <style>
+        /* 将class为red 的元素颜色设置为红色 */
+        .red{
+            color: red;
+        }
+
+        /* 将class为red 的 div 元素颜色设置为粉色，30px */
+        /*  
+            交集选择器 (同时满足 &&)
+            选中同时复合多个条件的元素
+            语法：选择器1.选择器2.选择器3{}
+                注意：交集选择器中如果有元素选择器，必须要以元素选择器开头
+        */
+        div.red{
+            color:pink;
+            font-size: 30px;
+        }
+        
+        .a.b.c{
+            color: blue
+        }
+        
+        /* 
+            并集选择器 （满足其一 ||）
+            同时选择多个选择器对应的元素
+            语法：选择器1,选择器2,选择器3{}
+        */
+        h1,span{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        这是h1
+    </h1>
+
+    <span>
+        这是span
+    </span>
+
+    <div class = "red">
+        我是div
+    </div>
+
+    <div class = "a c">我是div2</div>
+
+    <p class = "red">
+        我是p元素
+    </p>
+</body>
+</html>

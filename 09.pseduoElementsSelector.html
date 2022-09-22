@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09.pseduoElementsSelector</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+
+        /* 
+            伪元素，表示页面中的一些特殊的不真实存在的元素（特殊位置）
+                通常以：：开头
+                
+                ::first-letter
+                ::first-line
+                ::selection
+
+                ::before 元素的开始
+                ::after 元素的最后
+                    -before 和 after 必须结合content使用
+        */
+        /* div::before {
+            content: "ABC";
+            color: aquamarine;
+        }
+         */
+        
+        div::before{
+            content:"[";
+            color:aqua;
+        }
+
+        div::after{
+            content:"]";
+            color:aqua;
+        }
+        
+        p::before{
+            content: "color" ;
+            color:blue;
+        }
+
+        p::first-letter{
+            font-size: 35px;
+            color: aqua;
+        }
+
+        p::first-line {
+            background-color: rgb(199, 175, 221);
+        }
+
+        p::selection{
+            background-color: rgb(219, 157, 157);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>Hello hello how are u?</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus vero fugit obcaecati nemo fugiat inventore autem libero accusantium, laborum minus odio officiis impedit quidem alias ut id quam, ratione quia.</p>
+</body>
+</html>
