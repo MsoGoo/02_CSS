@@ -5,13 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>15.layoutBoxModel</title>
+    <style>
+        .box1{
+            /*  
+                content area, all the child elements are arranged inside the content area 
+                    width : width of content area
+                    height : height of content area
+            */
+            width: 200px;   
+            height: 200px;  
+            background-color: #fba;
+
+            /* 
+                border
+                    need at least 3 styles to set the border
+                        - border-width  
+                            - 1 value : all equal
+                            - 2 values : top,bottom & left,right
+                            - 3 values : top, left&right, bottom
+                            - 4 values : top, right, bottom, left
+                            - this value format can also be used in border-color and border style
+
+                        - borde-color
+                        - border-style
+            */
+            /* border-width: 10px;
+            border-color: #bfa #fac #c0a #0ac;
+            border-style: solid dotted dashed double; 
+            */
+            
+            /* 
+                border short form 
+                    - can also do : border-left: solid 10 orange;
+                                    ..............................
+
+                                    border-left: none
+            */
+            border: solid 10px orange;
+
+            /* 
+                padding
+                    padding-left
+                    padding-right
+                    padding-top
+                    padding-bottom
+                Note: 
+                    padding's size will change the box's size
+                    the background color will also used as padding color
+
+                    the box's size is determined by context area, border, and padding size
+            */
+
+            padding-top: 200px;
+
+            /*
+                margin
+                    - margin won't effect the box visible size
+                    - margin will change the box's size
+            */
+            margin: auto;
+        }
+        
+        .inner{
+            width: 300px;
+            height: 100%;
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
     <!-- 
         box model
             - css set all elements as a rectangle box
-        
-
+            - each box can be divided into those parts:
+                - content area
+                - padding (distance between the content area and border)
+                - border 
+                - margin 
      -->
+
+     <div class="box1">
+        <div class="inner"></div>
+     </div>
 </body>
 </html>
